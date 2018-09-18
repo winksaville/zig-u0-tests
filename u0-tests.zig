@@ -107,6 +107,9 @@ test "u0" {
     var pZ1 = &su0.z1;
     var pZ2 = &su0.z2;
     assert(pZ1 == pZ2);
+    assert(pZ1.* == 0);
+    assert(pZ2.* == 0);
+    assert(pZ1.* == pZ2.*);
 
     var pSu0 = &su0;
     var pSu0_u8 = @ptrCast(*align(1) u8, pSu0);
